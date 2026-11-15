@@ -45,10 +45,10 @@ function validar(){var ok=true,primeiro=null;
 /* mensagem */
 function mensagem(){var nome=$('nome').value.trim().replace(/\s+/g,' '),tel=$('tel').value,pr=document.querySelector('input[name=pres]:checked').value,m;
  if(pr==='nao'){
-  m='🎀 CONFIRMAÇÃO DE PRESENÇA — 18 ANOS DA CAROL\n\nResponsável: '+nome+'\nTelefone: '+tel+'\nPresença: Infelizmente não poderei comparecer. 💔\n\nMas desejo uma linda festa e muita felicidade! 🎂';
+  m=' CONFIRMAÇÃO DE PRESENÇA — 18 ANOS DA CAROL\n\nResponsável: '+nome+'\nTelefone: '+tel+'\nPresença: Infelizmente não poderei comparecer. \n\nMas desejo uma linda festa e muita felicidade! ';
  }else{var nomes=[];if(acomp)document.querySelectorAll('#lista input').forEach(function(i){nomes.push(i.value.trim().replace(/\s+/g,' '))});
   var tot=1+nomes.length;
-  m='🎀 CONFIRMAÇÃO DE PRESENÇA — 18 ANOS DA CAROL\n\nResponsável: '+nome+'\nTelefone: '+tel+'\nPresença: Confirmada! 💗\n\nAcompanhantes:'+(nomes.length?'\n'+nomes.map(function(x,i){return (i+1)+'. '+x}).join('\n'):' Nenhum')+'\n\nTotal de convidados: '+tot+(tot>1?' pessoas.':' pessoa.')+'\nNos vemos na festa! 🎂';}
+  m=' CONFIRMAÇÃO DE PRESENÇA — 18 ANOS DA CAROL\n\nResponsável: '+nome+'\nTelefone: '+tel+'\nPresença: Confirmada! \n\nAcompanhantes:'+(nomes.length?'\n'+nomes.map(function(x,i){return (i+1)+'. '+x}).join('\n'):' Nenhum')+'\n\nTotal de convidados: '+tot+(tot>1?' pessoas.':' pessoa.')+'\nNos vemos na festa! ';}
  return 'https://wa.me/'+ZAP+'?text='+encodeURIComponent(m);}
 /* confete */
 function confete(){var c=['🌸','✨','💗','⭐','🎀'];for(var i=0;i<26;i++){var e=document.createElement('span');e.className='confete';e.textContent=c[i%c.length];

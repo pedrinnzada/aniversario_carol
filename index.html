@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Carol · 18 anos</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<button id="abertura" type="button" aria-label="Abrir convite"><span class="env">💌</span><span class="script">Carol</span><p>Toque para abrir seu convite</p></button>
+
+<main class="paper">
+<!-- SVG sprites -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<radialGradient id="p1" cx="50%" cy="50%" r="60%"><stop offset="0" stop-color="#E987B0"/><stop offset="1" stop-color="#F8C8D7"/></radialGradient>
+<radialGradient id="p2" cx="50%" cy="50%" r="60%"><stop offset="0" stop-color="#F6D66B"/><stop offset="1" stop-color="#FFF3C4"/></radialGradient>
+<g id="pet"><ellipse cx="0" cy="-22" rx="11" ry="24"/></g>
+<g id="hib"><g fill="url(#p1)" opacity=".92"><use href="#pet" transform="rotate(0)"/><use href="#pet" transform="rotate(72)"/><use href="#pet" transform="rotate(144)"/><use href="#pet" transform="rotate(216)"/><use href="#pet" transform="rotate(288)"/></g><circle r="5" fill="#d9577f"/><path d="M0 0L2 -30" stroke="#F6D66B" stroke-width="2"/></g>
+<g id="dai"><g fill="#fff" stroke="#F8C8D7" stroke-width="1"><use href="#pet" transform="scale(.6) rotate(0)"/><use href="#pet" transform="scale(.6) rotate(45)"/><use href="#pet" transform="scale(.6) rotate(90)"/><use href="#pet" transform="scale(.6) rotate(135)"/><use href="#pet" transform="scale(.6) rotate(180)"/><use href="#pet" transform="scale(.6) rotate(225)"/><use href="#pet" transform="scale(.6) rotate(270)"/><use href="#pet" transform="scale(.6) rotate(315)"/></g><circle r="6" fill="url(#p2)"/></g>
+<g id="lil"><g fill="#F8C8D7" stroke="#E987B0" stroke-width=".8"><ellipse cx="0" cy="-22" rx="7" ry="22" transform="rotate(-30)"/><ellipse cx="0" cy="-22" rx="7" ry="22" transform="rotate(30)"/><ellipse cx="0" cy="-22" rx="7" ry="22"/></g></g>
+<g id="leaf"><path d="M0 0C14-16 14-44 0-60C-14-44-14-16 0 0Z" fill="#b9d8b0" opacity=".85"/></g>
+<symbol id="cluster" viewBox="0 0 200 200">
+<use href="#leaf" transform="translate(40 150) rotate(60)"/><use href="#leaf" transform="translate(70 120) rotate(100) scale(.9)"/><use href="#leaf" transform="translate(110 90) rotate(20)"/><use href="#leaf" transform="translate(30 60) rotate(130) scale(.8)"/>
+<use href="#hib" transform="translate(50 50) scale(1.5)"/><use href="#lil" transform="translate(120 40) scale(1.1)"/><use href="#dai" transform="translate(30 130) scale(1.2)"/><use href="#dai" transform="translate(105 115)"/><use href="#hib" transform="translate(150 95) scale(.8)"/><use href="#lil" transform="translate(80 85) rotate(180) scale(.8)"/>
+<path d="M170 20l3 8 8 3-8 3-3 8-3-8-8-3 8-3z" fill="#F6D66B"/>
+</symbol></defs></svg>
+
+<section id="convite">
+  <div class="flor tl bloom sway"><svg viewBox="0 0 200 200"><use href="#cluster"/></svg></div>
+  <div class="flor tr bloom sway" style="animation-delay:.2s,0s"><svg viewBox="0 0 200 200"><use href="#cluster"/></svg></div>
+  <div class="flor bl bloom sway" style="animation-delay:.4s,0s"><svg viewBox="0 0 200 200"><use href="#cluster"/></svg></div>
+  <div class="flor br2 bloom sway" style="animation-delay:.6s,0s"><svg viewBox="0 0 200 200"><use href="#cluster"/></svg></div>
+  <span class="star" style="top:22%;left:14%;font-size:20px">✦</span><span class="star" style="top:30%;right:12%;font-size:14px;animation-delay:.8s">✦</span>
+  <span class="star" style="bottom:28%;left:10%;font-size:16px;animation-delay:1.4s">✦</span><span class="star" style="bottom:24%;right:16%;font-size:22px;animation-delay:2s">✦</span>
+  <div class="in">
+    <p class="data" style="margin-top:0;color:var(--tx2)">VOCÊ ESTÁ CONVIDADO(A) PARA CELEBRAR</p>
+    <h1 class="script">Carol</h1>
+    <p class="num">18 ANOS<small>BIRTHDAY</small></p>
+    <p class="data">DOMINGO | 13 DE DEZEMBRO DE 2026</p>
+    <p class="hora">12:00 às 18:00</p>
+    <p class="local"><b>Sítio Bom Demais</b><br>Rua Alípio Elpídio Alves, 435<br>Bairro Titamar · CEP 35702-415</p>
+    <button class="btn" type="button" id="irConf">Confirmar minha presença</button>
+    <div class="deco" aria-hidden="true">🎂🍓🍹🍰</div>
+  </div>
+</section>
+
+<section id="contagem">
+  <h2>Faltam</h2>
+  <div class="cd" role="timer" aria-live="off"><div><b id="d">--</b><span>dias</span></div><div><b id="h">--</b><span>horas</span></div><div><b id="m">--</b><span>min</span></div><div><b id="s">--</b><span>seg</span></div></div>
+  <p class="sub" id="cdmsg" style="margin-top:18px">para a festa mais linda do ano</p>
+</section>
+
+<section id="confirmar">
+  <div class="flor tl" style="width:130px;opacity:.9"><svg viewBox="0 0 200 200"><use href="#cluster"/></svg></div>
+  <div class="flor br2" style="width:140px;opacity:.9"><svg viewBox="0 0 200 200"><use href="#cluster"/></svg></div>
+  <div class="in">
+    <h2 style="margin-top:34px">Confirme sua presença</h2>
+    <p class="sub">Leva menos de um minuto. A confirmação segue pelo WhatsApp.</p>
+    <form id="form" novalidate>
+      <div class="f" id="fNome"><label for="nome">Nome completo</label><input type="text" id="nome" autocomplete="name" placeholder="Seu nome e sobrenome"><div class="msg">Informe nome e sobrenome.</div></div>
+      <div class="f" id="fTel"><label for="tel">Telefone / WhatsApp</label><input type="tel" id="tel" inputmode="tel" autocomplete="tel" placeholder="(31) 99999-9999" maxlength="15"><div class="msg">Informe um telefone com DDD.</div></div>
+      <div class="f" id="fPres"><span class="lab">Você poderá comparecer?</span>
+        <label class="opt"><input type="radio" name="pres" value="sim"> Sim, estarei presente!</label>
+        <label class="opt"><input type="radio" name="pres" value="nao"> Infelizmente não poderei comparecer.</label>
+        <div class="msg">Escolha uma opção.</div></div>
+      <div class="reveal" id="blocoAcomp">
+        <div class="f"><span class="lab">Você deseja levar acompanhantes?</span>
+          <div class="sw" role="group" aria-label="Levar acompanhantes"><button type="button" id="tgSim" aria-pressed="false">Sim</button><button type="button" id="tgNao" aria-pressed="true">Não</button></div></div>
+        <div class="reveal" id="blocoQtd">
+          <div class="f" id="fQtd"><label for="qtd">Quantidade de acompanhantes</label><input type="number" id="qtd" min="1" max="10" inputmode="numeric" placeholder="1 a 10"><div class="msg">Informe de 1 a 10 acompanhantes.</div></div>
+          <div id="lista"></div>
+        </div>
+      </div>
+      <button class="btn full" type="submit" id="enviar">Confirmar presença</button>
+    </form>
+    <div id="ok"><div class="big">💗</div><h2>Presença registrada!</h2><p>Abrindo o WhatsApp… é só apertar <b>enviar</b> por lá para finalizar.</p><p class="sub">Não abriu? <a href="#" id="manual" target="_blank" rel="noopener">Toque aqui</a>.</p></div>
+  </div>
+</section>
+<footer>Carol · 18 anos · 13.12.2026<br>Te esperamos com muito carinho 🎀</footer>
+</main>
+</body>
+<script src="script.js"></script>
+</html>
